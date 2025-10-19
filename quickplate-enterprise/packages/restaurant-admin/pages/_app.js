@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const getUser = async () => {
-      const {  { user } } = await supabase.auth.getUser();
+     const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
       setLoading(false);
     };
@@ -29,4 +29,5 @@ export default function App({ Component, pageProps }) {
   }
 
   return <Component {...pageProps} user={user} />;
+
 }
