@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 
     getUser();
 
-    const {  { subscription } } = supabase.auth.onAuthStateChange(
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         setUser(session?.user ?? null);
       }
@@ -31,3 +31,4 @@ export default function App({ Component, pageProps }) {
   return <Component {...pageProps} user={user} />;
 
 }
+
