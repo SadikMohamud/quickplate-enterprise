@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/global.css';
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 
@@ -30,4 +30,5 @@ export default function App({ Component, pageProps }) {
   }
 
   return <Component {...pageProps} user={user} />;
+
 }
