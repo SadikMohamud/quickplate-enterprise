@@ -1,4 +1,4 @@
-import './global.css';
+import './styles/global.css';
 import { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
